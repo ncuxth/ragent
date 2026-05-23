@@ -20,7 +20,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     username: postgres
     password: postgres
-    url: jdbc:postgresql://127.0.0.1:5432/ragent?client_encoding=UTF8
+    url: jdbc:postgresql://192.168.75.131:5432/ragent?client_encoding=UTF8
     hikari:
       connection-timeout: 5000
       idle-timeout: 600000
@@ -31,12 +31,12 @@ spring:
 
   data:
     redis:
-      host: 127.0.0.1
+      host: 192.168.75.131
       port: 6379
-      password: 123456
+      password: 123321
 
 rocketmq:
-  name-server: 127.0.0.1:9876
+  name-server: 192.168.75.131:9876
   producer:
     group: ragent-producer${unique-name:}_pg
     send-message-timeout: 2000
@@ -193,7 +193,7 @@ ai:
         priority: 100
 
 rustfs:
-  url: http://localhost:9000
+  url: http://192.168.75.131:9000
 
 sa-token:
   token-name: Authorization
